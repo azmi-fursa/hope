@@ -8,7 +8,7 @@ stages{
 	stage('Clone And Build Project'){
 		steps{
 			//cloning the project PetClinic			 
-git clone https://github.com/spring-projects/spring-petclinic.git
+sh "git clone https://github.com/spring-projects/spring-petclinic.git"
 
 sh "pwd"
 dir('spring-petclinic'){
