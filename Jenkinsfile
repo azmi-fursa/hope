@@ -9,10 +9,12 @@ stages{
 		steps{
 			//cloning the project PetClinic
 			git branch: 'main', url: 'https://github.com/spring-projects/spring-petclinic'
-			
-			//entering the spring-petclinic directory
-			sh 'cd spring-petclinic'
 
+sh "pwd"
+dir('spring-petclinic'){
+sh "pwd"
+}
+			
 			//building the application
 			script{
 				"./mvnw package"
